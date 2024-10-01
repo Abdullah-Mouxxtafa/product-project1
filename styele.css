@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Menu Section */
+.menu-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    flex-grow: 1; /* Allow menu to take up available space */
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Order Confirmation Section (Cart) */
+.order-confirmation {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}
+
+.order-confirmation h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-confirmation p {
+    color: #666;
+}
+
+.order-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-summary ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.order-summary ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.new-order-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .menu-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    .order-confirmation {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-section {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+
+    .order-confirmation {
+        width: 100%;
+    }
+    }
